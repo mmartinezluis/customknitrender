@@ -1,10 +1,18 @@
-#' Calls rmarkdown::render with passed in output format code
+#' Define output format for rmarkdown files
+#'
+#' @description
+#' Defines the output format for rmarkdown's render function using integer representations:
+#' * `in_format(3)` for "pdf_document"
+#' * `in_format(33)` for "html_document"
+#' * Any other integer for "word_document" (e.g., `in_format(333)`, `in_format(4)`)
+#' @md
 #'
 #' @param x A numeric, non-decimal value to represent output format: 3 for "pdf_document", 33 for "html_document", and any other integer for "word_document".
 #'
 #' @returns The rmarkdown::render function called with the interpreted output format from x
-#' @export
 #'
+#' @export
+#' @importFrom rmarkdown render
 #' @examples
 #' x <- 3
 #' in_format(3)
@@ -24,13 +32,3 @@ in_format <- function(x) {
                       envir = globalenv())
   }
 }
-
-# You can learn more about package authoring with RStudio at:
-#
-#   https://r-pkgs.org
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Install Package:           'Cmd + Shift + B'
-#   Check Package:             'Cmd + Shift + E'
-#   Test Package:              'Cmd + Shift + T'
