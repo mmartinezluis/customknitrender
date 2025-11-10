@@ -6,7 +6,7 @@ Authors@R: c(
     person(
       "Luis", "Martinez",
       email = "lmmartinez3312@gmail.com",
-      role = c("aut", "cre")
+      role = c("aut", "cre", "cph")
     )
   )
 Description: Provides a function to define the output format of Rmd files 
