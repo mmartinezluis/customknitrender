@@ -121,14 +121,14 @@ With this, the frontmatter of the article files reduces to
 ---
 ```
 
-Now all three article files contain the same configuration for pdf,
-html, and word document output (which is great when you need the same
-config). However, when you press the `Knit` button from RStudio within
-one of the article files, regardless of whether you press “Knit to
-HTML”, “Knit to PDF”, or “Knit to Word”, the file will be knitted to
-PDF. This is because the Knit button runs knitr’s `knit` function with
-the first output type written in `_output.yaml`. Hence, if you wanted to
-render any article file in HTML instead, you would need to move the
+Now all three article files share the same configuration for pdf, html,
+and word document output (which is great when you need the same config).
+However, when you press the `Knit` button from RStudio within one of the
+article files, regardless of whether you press “Knit to HTML”, “Knit to
+PDF”, or “Knit to Word”, the file will be knitted to PDF. This is
+because the Knit button runs knitr’s `knit` function with the first
+output type written in `_output.yaml`. Hence, if you wanted to render
+any article file in HTML instead, you would need to move the
 `word_document` key to the top of the `_output.yaml` file, save the
 file, and then go to, say, article_1.Rmd, and knit the file. Hence, for
 any time you would like to switch the output format, you woud need to do
@@ -138,7 +138,7 @@ package provides a function, `in_format(x)`, that you can use in the
 frontmatter of your rmarkdown files to specify the desired output format
 using integers:
 
-``` yaml
+``` text
 ---
 knit: !r customknitrender::in_format(3)
 ---
@@ -158,3 +158,24 @@ customknitrender::in_format(33)
 renders the file in **html format**, and using any other integer
 defaults to **word document** format (e.g., `in_format(333)`,
 `in_format(4)`, …).
+
+Beware that you can still customize the output format within each
+individual rmarkdown file if you wish:
+
+``` text
+---
+output:
+  pdf_document:
+    toc: true
+  html_document:
+    toc: true
+knit: !r customknitrender::in_format(3)
+---
+
+
+{r}
+library(customknitrender)
+```
+
+will use all the keys defined in \_output.yaml for pdf format, while
+only overwriting the `toc` key if it exists.
