@@ -9,7 +9,7 @@
 
 The goal of customknitrender is to make it easy to switch between output
 formats for rmarkdown files when the files share the `output` yaml
-parameter from a single source.
+frontmatter from a single source.
 
 ## Installation
 
@@ -130,8 +130,8 @@ output type written in `_output.yaml`. Hence, if you wanted to render
 any article file in HTML instead, you would need to move the
 `html_document` key to the top of the `_output.yaml` file, save the
 file, and then go to, say, article_1.Rmd, and knit the file. Hence, for
-any time you would like to switch the output format, you woud need to do
-a cut-paste-save in `_output.yaml`, and a save in your desired file.
+any time you would like to switch the output format, you would need to
+do a cut-paste-save in `_output.yaml`, and a save in your desired file.
 Here is where the `customknitrender` package comes into play. The
 package provides a function, `in_format(x)`, that you can use in the
 frontmatter of your rmarkdown files to specify the desired output format
