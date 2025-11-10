@@ -74,11 +74,12 @@ header-includes:
 ```
 
 If you wanted all article rmarkdown files to share the same `output`
-rather than repeating the code within each file and, optionally, share
-the same `header-includes` latex configuration, you can create an
-`_output.yaml` file in the same directory where the rmarkdown files are,
-and move the `output` configurations there, and also create a
-`header.tex` file, and move the `header-includes` code there:
+configuration rather than repeating the code within each file and,
+optionally, share the same `header-includes` latex configuration, you
+can create an `_output.yaml` file in the same directory where the
+rmarkdown files are, and move the `output` configurations there, and
+also create a `header.tex` file, and move the `header-includes` code
+there:
 
 ``` text
   ProjectRoot
@@ -97,10 +98,8 @@ pdf_document:
   number_sections: yes
   includes:
     in_header: header.tex
-html_document:
-  default
-word_document:
-  default
+html_document: default
+word_document: default
 ```
 
 (notice that no top-bottom dashes are needed nor the `output` key in the
@@ -129,7 +128,7 @@ PDF”, or “Knit to Word”, the file will be knitted to PDF. This is
 because the Knit button runs knitr’s `knit` function with the first
 output type written in `_output.yaml`. Hence, if you wanted to render
 any article file in HTML instead, you would need to move the
-`word_document` key to the top of the `_output.yaml` file, save the
+`html_document` key to the top of the `_output.yaml` file, save the
 file, and then go to, say, article_1.Rmd, and knit the file. Hence, for
 any time you would like to switch the output format, you woud need to do
 a cut-paste-save in `_output.yaml`, and a save in your desired file.
@@ -177,5 +176,6 @@ knit: !r customknitrender::in_format(3)
 library(customknitrender)
 ```
 
-will use all the keys defined in \_output.yaml for pdf format, while
-only overwriting the `toc` key if it exists.
+will render the file in pdf format using all the keys defined in
+\_output.yaml for pdf format, while only overwriting the `toc` key if it
+exists.
