@@ -1,6 +1,6 @@
 Package: customknitrender
 Type: Package
-Title: Easily Switch Output Format of Rmd Files With Shared Frontmatter
+Title: Easily Switch Output Format of Rmarkdown Files with Shared Frontmatter
 Version: 0.1.0
 Authors@R: c(
     person(
