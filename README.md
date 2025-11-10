@@ -7,7 +7,9 @@
 
 <!-- badges: end -->
 
-The goal of customknitrender is to …
+The goal of customknitrender is to make it easy to switch between output
+formats for rmarkdown files when the files share the output yaml
+parameter from a single source.
 
 ## Installation
 
