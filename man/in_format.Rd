@@ -2,7 +2,7 @@
 % Please edit documentation in R/in_format.R
 \name{in_format}
 \alias{in_format}
-\title{Calls rmarkdown::render with passed in output format code}
+\title{Define output format for rmarkdown files}
 \usage{
 in_format(x)
 }
@@ -13,7 +13,12 @@ in_format(x)
 The rmarkdown::render function called with the interpreted output format from x
 }
 \description{
-Calls rmarkdown::render with passed in output format code
+Defines the output format for rmarkdown's render function using integer representations:
+\itemize{
+\item \code{in_format(3)} for "pdf_document"
+\item \code{in_format(33)} for "html_document"
+\item Any other integer for "word_document" (e.g., \code{in_format(333)}, \code{in_format(4)})
+}
 }
 \examples{
 x <- 3
