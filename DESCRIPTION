@@ -1,16 +1,22 @@
-Package: customKnitRender
+Package: customknitrender
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Easily Switch Output Format of Rmd Files With Shared Frontmatter
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Luis", "Martinez",
+      email = "lmmartinez3312@gmail.com",
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: Provides a function to define the output format of Rmd files 
+    with shared output yaml frontmatter content.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.3.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    rmarkdown
