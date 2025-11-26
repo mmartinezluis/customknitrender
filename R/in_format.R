@@ -5,6 +5,9 @@
 #' * `in_format(3)` for "pdf_document"
 #' * `in_format(33)` for "html_document"
 #' * Any other integer for "word_document" (e.g., `in_format(333)`, `in_format(4)`)
+#'
+#' Such a function becomes very handy when rmarkdown files share the same frontmatter
+#' through an _output.yaml file. Refer to project's GitHub page for more information \url{https://github.com/mmartinezluis/customknitrender}.
 #' @md
 #'
 #' @param x A numeric, non-decimal value to represent output format: 3 for "pdf_document", 33 for "html_document", and any other integer for "word_document".

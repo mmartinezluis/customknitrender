@@ -19,6 +19,9 @@ Defines the output format for rmarkdown's render function using integer represen
 \item \code{in_format(33)} for "html_document"
 \item Any other integer for "word_document" (e.g., \code{in_format(333)}, \code{in_format(4)})
 }
+
+Such a function becomes very handy when rmarkdown files share the same frontmatter
+through an _output.yaml file. Refer to project's GitHub page for more information \url{https://github.com/mmartinezluis/customknitrender}.
 }
 \examples{
 x <- 3

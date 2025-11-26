@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/mmartinezluis/customknitrender/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mmartinezluis/customknitrender/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of customknitrender is to make it easy to switch between output
