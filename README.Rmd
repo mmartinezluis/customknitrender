@@ -23,11 +23,8 @@ The goal of customknitrender is to make it easy to switch between output formats
 
 ## Installation
 
-You can install the development version of customknitrender from [GitHub](https://github.com/) with:
-
-``` r
-# install.packages("pak")
-pak::pak("mmartinezluis/customknitrender")
+```{r, eval = FALSE}
+install.packages("customknitrender")
 ```
 
 ## Usage

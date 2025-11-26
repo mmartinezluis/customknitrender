@@ -9,7 +9,7 @@ Authors@R: c(
       role = c("aut", "cre", "cph")
     )
   )
-Description: Provides a function to define the output format of Rmd files 
+Description: Define the output format of rmarkdown files 
     with shared output yaml frontmatter content.
 License: MIT + file LICENSE
 Encoding: UTF-8
