@@ -9,7 +9,8 @@ Authors@R: c(
       role = c("aut", "cre", "cph")
     )
   )
-Description: Define the output format of 'rmarkdown' files with shared output 'yaml' frontmatter content.
+Description: Define the output format of 'rmarkdown' files 
+with shared output 'yaml' frontmatter content.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
