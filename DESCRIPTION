@@ -1,7 +1,7 @@
 Package: customknitrender
 Type: Package
 Title: Easily Switch Output Format of 'Rmarkdown' Files with Shared Frontmatter
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: c(
     person(
       "Luis", "Martinez",
@@ -9,7 +9,10 @@ Authors@R: c(
       role = c("aut", "cre", "cph")
     )
   )
-Description: Define the output format of 'rmarkdown' files with shared output 'yaml' frontmatter content.
+Description: Define the output format of 'rmarkdown' files
+  with shared output 'yaml' frontmatter content. Rather than modifying
+  a shared 'yaml' file, use integers to easily switch output formats
+  for 'rmarkdown' files.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

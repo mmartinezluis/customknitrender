@@ -31,7 +31,6 @@ in_format <- function(x) {
   }
   function(input, ...) {
     rmarkdown::render(input,
-                      output_format = the_format(x),
-                      envir = globalenv())
+                      output_format = the_format(x))
   }
 }
